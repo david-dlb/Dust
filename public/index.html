@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 , maximum-scale=1.0 , minimum-scale=1.0 , user-scalable=no">
+    <link rel="stylesheet" href="complements/bootstrap/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
+
+
+    <script src="complements/jquery.js"></script>
+    <script src="complements/popper.js"></script>
+    <script src="complements/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <title>Dust</title>
+</head>
+
+<body class="text-white bg-gradient bg-black" id="body">
+
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-xxl navbar-dark bg-gradient bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <form class="d-flex">
+                <input name="search" id="search" class="form-control me-2 w-100" style="width: 1100px;" type="search"
+                    placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+            </form>
+
+            <div class="offcanvas offcanvas-start bg-gradient bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Dust</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <div id="to-login">
+                            <li class="nav-item bg-primary">
+                                <a class="nav-link active" href="login.html">Entra o reg&iacutestrate</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menu de usuario -->
+            <div style="display: none;" id="account">
+                <li class="nav-item dropstart">
+                <img src="image/music.jpg" alt="" width="40"  id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                      <li><a class="dropdown-item" href="/client.html">Gestionar</a></li> 
+                    </ul>
+                  </li>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Contenido -->
+    <div class="m-2 mt-5">
+        <div class="row m-2">
+
+            <!-- Seccion de Publicaciones -->
+            <div class="col-xl-8 col-12 mb-3">
+                <div class=" ">
+                    <div class="d-flex justify-content-between">
+                        <h2 class="mb-3 text-center">Publicaciones</h2>
+                    </div>
+                    <div id="announcements" class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 text-black">
+                        <div class="col cursor w-100" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalCenteredScrollable">
+                            <div class="card ">
+                                <div class="card-header">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex">
+                                            <img src="image/empty.png" alt="" width="30">
+                                            <div class=" ">
+                                                <p>Nombre</p>
+                                                <p>Hace N horas</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="image/empty.png" alt="" width="30">
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="image/product.jpg" style="height: 50vh;">
+
+                                <div class="card-body">
+                                    <p class="card-text">Ricardo Arjona</p>
+                                    <div class="divider"></div>
+                                    <div class="d-flex justify-content-around">
+                                        <img src="image/empty.png" alt="" width="30">
+                                        <img src="image/empty.png" alt="" width="30">
+                                        <img src="image/empty.png" alt="" width="30">
+                                        <img src="image/empty.png" alt="" width="30">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seccion de Sugerencias -->
+            <div class="col-xl-4 col-12 mb-3">
+                <div class="row text-center">
+                    <div class="col-3">
+                        <div class="line mt-1"></div>
+                    </div>
+                    <div class="col-6">Recomendados</div>
+                    <div class="col-3">
+                        <div class="line mt-1"></div>
+                    </div>
+                </div>
+                <div id="recent-songs" class="list-group">
+                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
+                        <img src="image/product.jpg" alt="" width="40">
+                        <p>Nombre</p>
+                    </a>
+                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
+                        <img src="image/product.jpg" alt="" width="40">
+                        <p>Nombre</p>
+                    </a>
+                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
+                        <img src="image/product.jpg" alt="" width="40">
+                        <p>Nombre</p>
+                    </a>
+                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
+                        <img src="image/product.jpg" alt="" width="40">
+                        <p>Nombre</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="b-example-divider"></div>
+
+
+
+    <!-- Footer -->
+    <div class=" ">
+        <footer class="py-5">
+            <div class="row m-2">
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-2">
+                    <h5>Section</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-12">
+                    <form>
+                        <h5>Subscribe to our newsletter</h5>
+                        <p>Monthly digest of whats new and exciting from us.</p>
+                        <div class="d-flex">
+                            <label for="newsletter1" class="visually-hidden">Email address</label>
+                            <input id="newsletter1" type="text" class="form-control w-75" placeholder="Email address">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex row m-2 justify-content-between py-4 my-4 border-top">
+                <div class="col-12 col-md-6">
+                    <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+                    <div class="">
+                        <img src="image/logo1.png"
+                            class="img-responsive bd-placeholder-img bd-placeholder-img-lg img-fluid  " width="277"
+                            height="80" alt="">
+                        <h1>Dust</h1>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#twitter" />
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#instagram" />
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#facebook" />
+                                </svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
+        aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-black">
+                <div class="modal-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex">
+                            <img src="image/empty.png" alt="" width="30">
+                            <div class="">
+                                <p>Nombre</p>
+                                <p>Hace N horas</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="image/empty.png" alt="" width="30">
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="image/product.jpg" style="height: 50vh; width: 100%;">
+
+                    <div class="">
+                        <p class="card-text">Ricardo Arjona</p>
+                        <div class="divider"></div>
+                        <div class="d-flex justify-content-around">
+                            <img src="image/empty.png" alt="" width="30">
+                            <img src="image/empty.png" alt="" width="30">
+                            <img src="image/empty.png" alt="" width="30">
+                            <img src="image/empty.png" alt="" width="30">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="Utils/petitions.js"></script>
+
+    <script src="index.js"></script> 
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+[
+    {
+        "superCategory": "Computadoras",
+        "subCategory": [
+            "PC Completa/Kits",
+            "Laptop",
+            "Laptop Accesorios",
+            "Monitores",
+            "Motherboard",
+            "Tarjeta de Video",
+            "Disco Duro",
+            "Fuentes/Chasis",
+            "Microprocesador",
+            "Tarjeta de Sonido",
+            "Lector/Quemador",
+            "Backup",
+            "Impresora/Cartuchos",
+            "Teclado y Mouse",
+            "Memoria Ram",
+            "Modem/Wifi/Internet",
+            "Bocinas",
+            "Tarjeta de Red",
+            "CD/DVD",
+            "Audífonos/Micróf/Wcam",
+            "Hubs/Regletas",
+            "Cables/Adaptadores",
+            "Otros"
+        ]
+    },
+    {
+        "superCategory": "Compra Venta",
+        "subCategory": [
+            "Compra y Venta",
+            "Reproductor Portatíl",
+            "Antiguedad y Colección",
+            "Aseo/Perfumería",
+            "Cámara/Foto/Video",
+            "Implementos Deportivos",
+            "Ferretería/Construcción",
+            "Instrumentos Musicales",
+            "Mascotas/Accesorios",
+            "Luces/Iluminación",
+            "Útiles del Hogar",
+            "Electrónica/Herramientas",
+            "Regalos/Juguetes",
+            "Alimentos/Bebidas",
+            "Útiles de Belleza",
+            "Cambio de Moneda",
+            "Gastronomia/Insumos",
+            "Muebles",
+            "Baterías/Cargador",
+            "Decoración",
+            "Salud/Medicinas",
+            "Otros",
+            "Programas/Contenido Digital",
+            "Flash/MicroSD/Memorias",
+            "Libros/Revistas",
+            "Consolas/Videojuegos",
+            "Ropa Prendas Accesorios"            
+        ]
+    },
+    {
+        "superCategory": "Moviles y Tabletas",
+        "subCategory": [
+            "Movíles y Tabletas",
+            "Móviles",
+            "Tabletas",
+            "Reloj inteligente",
+            "Cables/Cargadores",
+            "Forros/Micas",
+            "Baterías",
+            "Piezas",
+            "Batería Externa",
+            "Servicios a Móviles",
+            "Aplicaciones",
+            "Recarga/Transferencia",
+            "Talleres de Reparación",
+            "Otros"
+        ]
+    },
+    {
+        "superCategory": "Servicios",
+        "subCategory": [
+            "Construcción/Mantenimiento",
+            "Fiesta/Show/Animación",
+            "Carpintería/Cristalería",
+            "Contenido Digital/Programas",
+            "Decoración/Diseño",
+            "Electrónico",
+            "Fotografía",
+            "Agencia Publicitaria",
+            "Peluquería/Barbería/Belleza",
+            "Masajista",
+            "Refrigeración/Clima",
+            "Programador/Informático",
+            "Profesor/Clases",
+            "Excursiones/Viajes",
+            "Traductor/Interprete",
+            "Tramites/Gestiones",
+            "Joyería",
+            "Otros Servicios"
+        ]
+    },
+    {
+        "superCategory": "Viviendas",
+        "subCategory":[ 
+            "Casa/Apartamento",
+            "Permuta",
+            "Renta a Extranjeros",
+            "Renta a Cubanos",
+            "Locales/Espacios",
+            "Casa en la Playa",
+            "Gestor Inmobiliario"
+        ]
+    },
+    {
+        "superCategory": "Vehiculos y Piezas",
+        "subCategory":[
+            "Carros",
+            "Motos",
+            "Bicicletas",
+            "Transporte y Taxis",
+            "Patinetas/Carriolas",
+            "Útiles/Accesorios",
+            "Piezas de Carros",
+            "Piezas de Moto",
+            "Piezas de Bicicleta",
+            "Luces/Bombillos",
+            "Taller/Mecánico",
+            "Otros Medios",
+            "Camiones/Camionetas"
+        ]
+    },
+    {
+        "superCategory": "Empleos",
+        "subCategory": [
+            "Ofrezco Empleo",
+            "Busco Empleo"
+        ]
+    },
+    {
+        "superCategory": "Electodomesticos",
+        "subCategory":[
+            "Televisores",
+            "Refrigerador/Nevera",
+            "Aire Acondicionado/Split",
+            "Ventiladores",
+            "Cocinas/Hornos",
+            "Lavadoras",
+            "Batidora/Licuadora",
+            "Teléfonos",
+            "Cajita Digital",
+            "Antena Interior/Exterior",
+            "Otros"
+        ]
+    },
+    {
+        "superCategory": "Amor/Amistad",
+        "subCategory": [
+            "Chica Busca Chico",
+            "Chico Busca Chica",
+            "Otras Atracciones"
+        ]
+    },
+    {
+        "superCategory": "Comunidad",
+        "subCategory": [
+            "Presentaciones/Eventos"
+        ]
+    },
+    {
+        "superCategory": "Juguetes de Adultos",
+        "subCategory": [
+            "Juguetes"
+        ]
+    }
+]
