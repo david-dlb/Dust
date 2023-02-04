@@ -43,67 +43,54 @@
 
 
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-xxl navbar-dark bg-gradient bg-dark">
+    <nav id="navbar" class="navbar fixed navbar-expand-xxl navbar-dark fixed-top color-nav">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <form class="d-flex">
-                <input name="search" id="search" class="form-control me-2 w-100" style="width: 1100px;" type="search"
-                    placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-start color-nav" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Dust</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body bg-dark">
+                <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item bg-primary" data-bs-toggle="modal" data-bs-target="#AddClient">
+                        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#AddClient">
                             <span class="nav-link active" href="">Agregar cliente</span>
+                        </li>
+                        <li>
+                            <form id="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-radius-20"
+                                        placeholder="Buscar clientes" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </form>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!-- Menu de usuario -->
-            <div>
-                <img src="image/music.jpg" alt="" width="40">
-            </div>
         </div>
     </nav>
 
+    <div class="mt-4">.</div>
+ 
+    <div id="clients" class="mt-5">
 
-    <div class="container-fluid">
-        <div class="row">
-             
-
-            <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Clientes</h1>
-                </div>
-                
-                <div id="clients">
-
-                </div> 
-            </main>
-        </div>
     </div>
 
 
 
     <!-- Modal para editar cliente -->
-    <div class="modal fade" id="EditClient" tabindex="-1" 
-        aria-labelledby="EditClient" aria-hidden="true">
+    <div class="modal fade" id="EditClient" tabindex="-1" aria-labelledby="EditClient" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-black">
                 <div class="modal-header">
@@ -112,14 +99,14 @@
                 <div class="modal-body">
                     <form id="form-edit-client">
                         <input type="text" name="name" placeholder="Nombre">
-                        <input type="text" name="status" placeholder="Estado"> 
-                        <input type="hidden" name="id">
+                        <input type="text" name="status" placeholder="Estado">
+                        <input type="hidden" name="id" id="id-modal">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
                             <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
                         </div>
                     </form>
-                </div> 
+                </div>
             </div>
         </div>
     </div>
@@ -156,8 +143,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
-                </div> 
+
+                </div>
             </div>
         </div>
     </div>

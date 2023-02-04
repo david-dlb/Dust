@@ -1,10 +1,10 @@
 const loadAllClients = async () => {
     const clients = await getAllClients()
     const clientsDiv = document.getElementById("clients");
-    console.log(clients.clients)
+    console.log(clients.bag)
     let html = ''
-    for (let i = 0; i < clients.clients.length; i++) {
-        let ele = clients.clients[i]
+    for (let i = 0; i < clients.bag.length; i++) {
+        let ele = clients.bag[i]
         const inf = await getClientInformation(ele.id)
         console.log(inf)
         html += '<div class="border border-3 p-3 mt-4" ' + ele.id + '>'
@@ -13,8 +13,8 @@ const loadAllClients = async () => {
         html += '        <button type="button" class="btn btn-primary left" data-bs-toggle="collapse" data-bs-target="#inf' + i +'">'
         html += '            Ver mas'
         html += '        </button>'
-        html += '        <button type="button" class="btn btn-primary left" data-bs-toggle="modal"'
-        html += '            data-bs-target="#EditClient">'
+        html += '        <button type="button" id="' + ele.id + '" class="edit-button btn btn-primary left" data-bs-toggle="modal"'
+        html += '            data-bs-target="#EditClient" >'
         html += '            Editar Datos'
         html += '        </button>'
         html += '    </div>'
@@ -22,7 +22,7 @@ const loadAllClients = async () => {
         html += '    <div id="inf' + i + '" class="collapse">'
         html += '        <div class="d-flex justify-content-between mt-4">'
         html += '            <span class="text-muted">Cantidad de anuncios</span>'
-        html += '            <span class="text-primary">' + inf.cantAnnouncements + '</span>'
+        html += '            <span class="text-primary">' + inf.bag.cantAnnouncements + '</span>'
         html += '        </div>'
         html += '        <hr>'
         html += '        <div class="d-flex justify-content-between">'
@@ -38,7 +38,7 @@ const loadAllClients = async () => {
         html += '</div>'
     } 
     clientsDiv.innerHTML = html
-    
+    addModalEdit()
 }
 
 const validatePermition = async () => {
@@ -58,7 +58,7 @@ const newClient = async (e) => {
     }
     console.log(data)
     const client = await addClient(data)
-    console.log(client)
+    console.log(client.bag)
 }
 
 const editClient = async (e) => {
@@ -66,11 +66,24 @@ const editClient = async (e) => {
     const data = {
         name: e.target.name.value,
         status: e.target.status.value,
-        id: 2
+        id: e.target.id.value
     }
     console.log(data)
     const client = await editDataClient(data)
     console.log(client)
+}
+
+const setModalId = (e) => {
+    document.getElementById("id-modal").value = e.srcElement.id
+    console.log(document.getElementById("id-modal").value)
+}
+
+const addModalEdit = () => { 
+    const edit = document.getElementsByClassName("edit-button")
+    for (let i = 0; i < edit.length; i++) {
+        const element = edit[i];
+        edit[i].addEventListener("click", setModalId)
+    }
 }
 
 document.getElementById("form-new-client").addEventListener("submit", newClient)

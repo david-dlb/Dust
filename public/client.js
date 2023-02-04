@@ -6,8 +6,8 @@ const loadAllAnnouncement = async () => {
     const div = document.getElementById("announcements");
     let html = ""
     for (let i = 0; i < announcement.length; i++) {
-        html += '<div class="col cursor w-100" data-bs-toggle="modal"'
-        html += '   data-bs-target="#EditPublication">' 
+        html += '<div id="' + announcement[i].id + '" class="edit-card col cursor w-100" data-bs-toggle="modal"'
+        html += '   data-bs-target="#EditPublication">'
         html += '   <div class="card ">'
         html += '       <div class="card-header">'
         html += '           <div class="d-flex justify-content-between">'
@@ -15,7 +15,7 @@ const loadAllAnnouncement = async () => {
         html += '                   <img src="image/empty.png" alt="" width="30">'
         html += '                   <div class=" ">'
         html += '                       <p class="name">' + announcement[i].name + '</p>'
-        html += '                    <p>Hace ' + announcement[i].time +'</p>'
+        html += '                    <p>Hace ' + announcement[i].time + '</p>'
         html += '                   </div>'
         html += '               </div>'
         html += '               <div>'
@@ -38,6 +38,7 @@ const loadAllAnnouncement = async () => {
         html += '</div>'
     }
     div.innerHTML = html
+    addModalEdit()
 }
 
 const editAnnouncement = async (e) => {
@@ -49,7 +50,7 @@ const editAnnouncement = async (e) => {
         contact: e.target.contact.value,
         price: e.target.price.value,
         image: e.target.image.value,
-        id: 1
+        id: e.target.id.value
     }
     console.log(data)
     const response = await editMyAnnouncement(data)
@@ -57,7 +58,7 @@ const editAnnouncement = async (e) => {
 }
 
 const validatePermition = async () => {
-    const user = await validateClient() 
+    const user = await validateClient()
     if (user.msg) {
         location.href = "/"
     }
@@ -87,6 +88,19 @@ const editAccount = async (e) => {
     console.log(data)
     const response = await editAccountClient(data)
     console.log(response)
+}
+
+
+const setModalId = (e, id) => {
+    document.getElementById("id-modal").value = id
+    console.log(document.getElementById("id-modal").value)
+}
+
+const addModalEdit = () => {
+    const edit = document.getElementsByClassName("edit-card")
+    for (let i = 0; i < edit.length; i++) { 
+        edit[i].addEventListener("click", (e) => { setModalId(e, edit[i].id) })
+    } 
 }
 
 document.getElementById("create-announcement").addEventListener('submit', addAnnouncement)

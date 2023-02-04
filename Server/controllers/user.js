@@ -6,10 +6,12 @@ const getAllAnnouncement = async (req, res) => {
     try {
         const announcements = await Announcement.findAll()
         res.json({
-            announcements
+            status: "200",
+            bag: announcements
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }

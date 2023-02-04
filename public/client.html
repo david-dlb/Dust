@@ -43,127 +43,185 @@
 
 
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-xxl navbar-dark bg-gradient bg-dark">
+    <nav id="navbar" class="navbar fixed navbar-expand-xxl navbar-dark fixed-top color-nav">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <form class="d-flex">
-                <input name="search" id="search" class="form-control me-2 w-100" style="width: 1100px;" type="search"
-                    placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-start color-nav" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Dust</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body bg-dark">
+                <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item" data-bs-toggle="modal"
-                            data-bs-target="#CreatePublication">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <span data-feather="home"></span>
-                                Agregar publicacion
-                            </a>
+                        <li>
+                            <form id="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-radius-20"
+                                        placeholder="Buscar en venta" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </form>
                         </li>
-                        <li class="nav-item" data-bs-toggle="modal"
-                            data-bs-target="#EditAccount">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
-                                Editar cuenta
-                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Terminos y condiciones de
+                                uso</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- Menu de usuario -->
-            <div>
-                <img src="image/music.jpg" alt="" width="40">
+            <div style="display: none;" id="account">
+                <div class="dropstart">
+                    <i class="bi bi-person-circle cursor" id="dropdown01" title="Cuenta" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                        <li><a class="dropdown-item" href="/client.html">Gestionar</a></li>
+                        <li><a class="dropdown-item" href="/client.html">Cerrar sesion</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
+    <div class="mt-4">.</div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-black sidebar collapse">
-                <div class="position-sticky pt-3">
-                    <ul class="nav flex-column">
-                        <li class="nav-item" data-bs-toggle="modal"
-                            data-bs-target="#CreatePublication">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <span data-feather="home"></span>
-                                Agregar publicacion
-                            </a>
-                        </li>
-                        <li class="nav-item" data-bs-toggle="modal"
-                            data-bs-target="#EditAccount">
-                            <a class="nav-link" href="#">
-                                <span data-feather="file"></span>
-                                Editar cuenta
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Mis Publicaciones</h1>
-                </div>
-
-                <div id="announcements" class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 text-black">
-                    <div class="col cursor w-100" data-bs-toggle="modal"
-                        data-bs-target="#EditPublication">
-                        <div class="card ">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between">
-                                    <div class="d-flex">
-                                        <img src="image/empty.png" alt="" width="30">
-                                        <div class=" ">
-                                            <p class="name">Nombre</p>
-                                            <p>Hace N horas</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <img src="image/empty.png" alt="" width="30">
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="image/product.jpg" style="height: 50vh;">
-
-                            <div class="card-body">
-                                <p class="card-text">Ricardo Arjona</p>
-                                <div class="divider"></div>
-                                <div class="d-flex justify-content-around">
-                                    <img src="image/empty.png" alt="" width="30">
-                                    <img src="image/empty.png" alt="" width="30">
-                                    <img src="image/empty.png" alt="" width="30">
-                                    <img src="image/empty.png" alt="" width="30">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
+    <div class="mt-5 d-flex">
+        <img src="image/1.png" class="rounded-circle me-2" width="150" alt="">
+        <div>
+            <h2>David Lezcano Becerra</h2>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreatePublication">
+                Agregar publicacion</button>
+            <button class="btn btn-primary mt-1 mt-sm-0" data-bs-toggle="modal" data-bs-target="#EditAccount">
+                Editar perfil
+            </button>
         </div>
     </div>
 
 
+    <div class="divider bg-light mt-2"></div>
+
+
+    <div class="bd-example">
+        <nav class="p-3">
+            <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-genre-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-genre" type="button" role="tab"
+                    aria-controls="nav-genre" aria-selected="true">Publicaciones</button>
+                <button class="nav-link" id="nav-singers-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-singers" type="button" role="tab"
+                    aria-controls="nav-singers" aria-selected="false">Informacion</button>
+            </div>
+        </nav>
+
+        <!-- Contenido -->
+        <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade show active" id="nav-genre" role="tabpanel"
+                aria-labelledby="nav-genre-tab">
+                <h2>Publicaciones</h2>
+
+                <div id="" class="list-group mt-2">
+                    <div class="d-flex cursor bg-gradient bg-black p-2 m-2" data-bs-toggle="modal"
+                    data-bs-target="#EditPublication">
+                        <div class="">
+                            <img src="image/product.jpg" class="img-fluid" alt="" width="250">
+                        </div>
+                        <div class=" ms-2">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div> 
+            
+                    <div class="d-flex cursor bg-gradient bg-black p-2 m-2" data-bs-toggle="modal"
+                    data-bs-target="#EditPublication">
+                        <div class=" ">
+                            <img src="image/logo.png" class="img-fluid" alt="" width="250">
+                        </div>
+                        <div class=" ms-2">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div> 
+            
+                    <div class="d-flex cursor bg-gradient bg-black p-2 m-2" data-bs-toggle="modal"
+                    data-bs-target="#EditPublication">
+                        <div class=" ms-2">
+                            <img src="image/next.png" class="img-fluid" alt="" width="250">
+                        </div>
+                        <div class="">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="nav-singers" role="tabpanel"
+                aria-labelledby="nav-singers-tab">
+                <div>
+                    <h2>Informaci&oacuten General</h2>
+                    <div class="row border border-3 m-1 mt-3 p-3">
+                        <div class="col-12 col-md-6">
+
+                            <div class="d-flex justify-content-between">
+                                <span class="">Nombre</span>
+                                <span class="text-primary">David Lezcano</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Contacto</span>
+                                <span class="text-primary">55775438</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Publicaciones</span>
+                                <span class="text-primary">311</span>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Tiempo Disponible</span>
+                                <span class="text-primary">311</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">Me gusta</span>
+                                <span class="text-primary">311</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted">No me gusta</span>
+                                <span class="text-primary">311</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
 
     <!-- Modal para editar publicacion -->
-    <div class="modal fade" id="EditPublication" tabindex="-1"
-        aria-labelledby="EditPublication" aria-hidden="true">
+    <div class="modal fade" id="EditPublication" tabindex="-1" aria-labelledby="EditPublication" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-black">
                 <div class="modal-header">
@@ -177,7 +235,7 @@
                         <input type="text" name="contact" placeholder="Contacto">
                         <input type="number" name="price" placeholder="Precio">
                         <input type="file" name="image" id="">
-
+                        <input type="hidden" name="id" id="id-modal">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
                             <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
@@ -190,8 +248,7 @@
 
 
     <!-- Modal para crear publicacion -->
-    <div class="modal fade" id="CreatePublication" tabindex="-1"
-        aria-labelledby="CreatePublication" aria-hidden="true">
+    <div class="modal fade" id="CreatePublication" tabindex="-1" aria-labelledby="CreatePublication" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-black">
                 <div class="modal-header">
@@ -206,7 +263,7 @@
                         <input type="number" name="price" placeholder="Precio">
                         <input type="file" name="image" id="">
 
-                        
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
                             <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Guardar</button>
@@ -219,8 +276,7 @@
 
 
     <!-- Modal para editar cuenta -->
-    <div class="modal fade" id="EditAccount" tabindex="-1"
-        aria-labelledby="EditAccount" aria-hidden="true">
+    <div class="modal fade" id="EditAccount" tabindex="-1" aria-labelledby="EditAccount" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content text-black">
                 <div class="modal-header">
@@ -241,8 +297,7 @@
 
 
     <script src="Utils/petitions.js"></script>
-    <script src="client.js"></script>
-
+    <!-- <script src="client.js"></script> -->
 </body>
 
 </html>

@@ -10,10 +10,12 @@ const getAllClients = async (req, res) => {
         const clients = await Client.findAll()
         console.log(clients)
         res.json({
-            clients
+            status: "200",
+            bag: clients
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -29,11 +31,15 @@ const getClientInformation = async (req, res) => {
         })
         const client = await Client.findByPk(id)
         res.json({
-            client,
-            cantAnnouncements: announcement.length
+            status: "200",
+            bag: {
+                client,
+                cantAnnouncements: announcement.length
+            }
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -52,11 +58,12 @@ const addClient = async (req, res) => {
         })
         await client.save()
         res.json({
-            client
+            status: "200",
+            bag: client
         })
     } catch (error) {
-        console.log(error)
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -72,10 +79,12 @@ const editClient = async (req, res) => {
             time: time
         })
         res.json({
-            client
+            status: "200",
+            bag: client
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }

@@ -8,7 +8,8 @@ const checkJwt = (req, res) => {
 
     if (!token) {
 
-        return res.status(401).json({
+        return res.json({
+            status: "401",
             msg: 'No hay token en la peticion'
         })
     }
@@ -17,31 +18,19 @@ const checkJwt = (req, res) => {
         const { id, name } = jwt.verify(token, process.env.SECRETORPRIVATEKEY)
         //console.log(name)
         res.json({
-            name
+            status: "200",
+            bag: name
         })
     } catch (error) { 
-        res.status(401).json({
+        res.json({
+            status: "401",
             msg: 'Token no valido'
         })
     }
 }
 
-const isValidUser = (req, res) => {
-    const { id } = req.params
-    
-    const valid = isValidIdDB(id, req.uid)
-    if(!valid){
-        res.status(401).json({
-            msg: "Usuario no tiene permisos"
-        })
-    }
-    res.json({
-        valid
-    })
-}
 
 
 module.exports = {
-    checkJwt,
-    isValidUser
+    checkJwt
 }

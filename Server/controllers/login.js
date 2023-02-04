@@ -19,10 +19,12 @@ const getUser = async (req, res) => {
         const { id, name} = user[0].dataValues
         let token = await generateJwt(id, name)
         res.json({
-            token
+            status: "200",
+            bag: token
         })
     } catch (error) {
-        res.status(401).json({
+        res.json({
+            status: "401",
             msg: error
         })
     }

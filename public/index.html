@@ -22,20 +22,15 @@
 
 
     <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-xxl navbar-dark bg-gradient bg-dark">
+    <nav id="navbar" class="navbar fixed navbar-expand-xxl navbar-dark fixed-top color-nav">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <form class="d-flex">
-                <input name="search" id="search" class="form-control me-2 w-100" style="width: 1100px;" type="search"
-                    placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-            </form>
 
-            <div class="offcanvas offcanvas-start bg-gradient bg-dark" tabindex="-1" id="offcanvasNavbar"
+            <div class="offcanvas offcanvas-start color-nav" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title text-black" id="offcanvasNavbarLabel">Dust</h5>
@@ -44,31 +39,51 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <li class="p-1 nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <span id="boot-icon" class="bi bi-house-door-fill text-primary m-0 p-0"
+                                    style="font-size:1.3rem; color: #000;"></span>
+                                Inicio
+                            </a>
                         </li>
-                        <div id="to-login">
-                            <li class="nav-item bg-primary">
-                                <a class="nav-link active" href="login.html">Entra o reg&iacutestrate</a>
-                            </li>
-                        </div>
+                        <li class="p-1 ">
+                            <form id="search">
+                                <div class="input-group bg-light border-radius-20">
+                                    <span id="boot-icon" class="bi bi-search cursor m-0 p-1"
+                                        style="font-size:1.3rem; color: #000;"></span>
+
+                                    <input type="text" class="form-control border-radius-20"
+                                        placeholder="Buscar en venta" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
+                            </form>
+                        </li>
+                        <li class="p-1 nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Terminos y condiciones de
+                                uso</a>
+                        </li>
+                        <li class="p-1 nav-item">
+                            <a class="nav-link active" href="login.html">Entra o reg&iacutestrate</a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <!-- Menu de usuario -->
             <div style="display: none;" id="account">
-                <li class="nav-item dropstart">
-                <img src="image/music.jpg" alt="" width="40"  id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="dropstart">
+                    <i class="bi bi-person-circle cursor" id="dropdown01" title="Cuenta" data-bs-toggle="dropdown"
+                        aria-expanded="false"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                      <li><a class="dropdown-item" href="/client.html">Gestionar</a></li> 
+                        <li><a class="dropdown-item" href="/client.html">Gestionar</a></li>
+                        <li><a class="dropdown-item" href="/client.html">Cerrar sesion</a></li>
                     </ul>
-                  </li>
+                </div>
             </div>
         </div>
     </nav>
 
 
-
+    <div class="mt-3">.</div>
 
     <!-- Contenido -->
     <div class="m-2 mt-5">
@@ -77,73 +92,176 @@
             <!-- Seccion de Publicaciones -->
             <div class="col-xl-8 col-12 mb-3">
                 <div class=" ">
-                    <div class="d-flex justify-content-between">
-                        <h2 class="mb-3 text-center">Publicaciones</h2>
-                    </div>
                     <div id="announcements" class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-3 text-black">
-                        <div class="col cursor w-100" data-bs-toggle="modal"
-                            data-bs-target="#exampleModalCenteredScrollable">
+                        <div class="col w-100">
                             <div class="card ">
                                 <div class="card-header">
                                     <div class="d-flex justify-content-between">
                                         <div class="d-flex">
-                                            <img src="image/empty.png" alt="" width="30">
+                                            <img src="image/1.png" class="bd-placeholder-img rounded-circle me-2" alt=""
+                                                width="55">
                                             <div class=" ">
                                                 <p>Nombre</p>
-                                                <p>Hace N horas</p>
+                                                <span class="text-muted">Hace N horas</span>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <img src="image/empty.png" alt="" width="30">
                                         </div>
                                     </div>
                                 </div>
-                                <img src="image/product.jpg" style="height: 50vh;">
+                                <img src="image/product.jpg" class="img-fluid w-100">
 
+                                <div class="divider"></div>
                                 <div class="card-body">
-                                    <p class="card-text">Ricardo Arjona</p>
+                                    <!-- Informacion -->
+                                    <div class="d-flex justify-content-around text-muted">
+                                        <div>
+                                            <p>Vendo sansung galaxy</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-primary">$ <span>424</span></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Descripcion -->
+                                    <div class="accordion-item">
+                                        <h4 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Descripcion
+                                            </button>
+                                        </h4>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero
+                                                    expedita voluptatibus fugiat in minima perferendis, quaerat
+                                                    molestias similique commodi aperiam placeat repudiandae corporis
+                                                    aut. Beatae quam pariatur quo soluta voluptatem.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="divider"></div>
-                                    <div class="d-flex justify-content-around">
-                                        <img src="image/empty.png" alt="" width="30">
-                                        <img src="image/empty.png" alt="" width="30">
-                                        <img src="image/empty.png" alt="" width="30">
-                                        <img src="image/empty.png" alt="" width="30">
+
+                                    <div class="d-flex justify-content-around mt-2">
+
+                                        <span id="boot-icon" class="bi bi-hand-thumbs-up text-primary cursor m-0 p-0"
+                                            style="font-size:large; color: #000;"><span>313sss</span></span>
+
+                                        <span id="boot-icon" class="bi bi-hand-thumbs-down text-danger cursor m-0 p-0"
+                                            style="font-size:large; color: #000;"><span>323</span></span>
+
+                                        <a href="index.html" id="boot-icon"
+                                            class="bi bi-whatsapp text-success nav-link m-0 p-0"
+                                            style="font-size:large;">Comprar</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
 
+
+
             <!-- Seccion de Sugerencias -->
             <div class="col-xl-4 col-12 mb-3">
-                <div class="row text-center">
+                <!-- Recomendados -->
+                <div>
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <div class="line mt-1"></div>
+                        </div>
+                        <div class="col-6">
+                            <h4>Recomendados</h4>
+                        </div>
+                        <div class="col-3">
+                            <div class="line mt-1"></div>
+                        </div>
+                    </div>
+                    <div id="" class="list-group">
+                        <a href="#"
+                            class="text-decoration-none text-white bg-gradient p-2 m-2 bg-black  d-flex gap-3 py-3"
+                            aria-current="true">
+                            <img src="image/1.png" class="rounded-circle" alt="" width="40">
+                            <p>Nombre</p>
+                        </a>
+                        <a href="#"
+                            class="text-decoration-none text-white  bg-gradient p-2 m-2 bg-black d-flex gap-3 py-3"
+                            aria-current="true">
+                            <img src="image/1.png" class="rounded-circle" alt="" width="40">
+                            <p>Nombre</p>
+                        </a>
+                        <a href="#"
+                            class="text-decoration-none text-white bg-gradient p-2 m-2 bg-black  d-flex gap-3 py-3"
+                            aria-current="true">
+                            <img src="image/1.png" class="rounded-circle" alt="" width="40">
+                            <p>Nombre</p>
+                        </a>
+                        <a href="#"
+                            class="text-decoration-none text-white bg-gradient p-2 m-2 bg-black  d-flex gap-3 py-3"
+                            aria-current="true">
+                            <img src="image/1.png" class="rounded-circle" alt="" width="40">
+                            <p>Nombre</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Anuncios mas famosos -->
+                <div class="row text-center mt-3">
                     <div class="col-3">
                         <div class="line mt-1"></div>
                     </div>
-                    <div class="col-6">Recomendados</div>
+                    <div class="col-6">
+                        <h4>Anuncios mas visitados</h4>
+                    </div>
                     <div class="col-3">
                         <div class="line mt-1"></div>
                     </div>
                 </div>
-                <div id="recent-songs" class="list-group">
-                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
-                        <img src="image/product.jpg" alt="" width="40">
-                        <p>Nombre</p>
-                    </a>
-                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
-                        <img src="image/product.jpg" alt="" width="40">
-                        <p>Nombre</p>
-                    </a>
-                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
-                        <img src="image/product.jpg" alt="" width="40">
-                        <p>Nombre</p>
-                    </a>
-                    <a href="#" class="text-decoration-none text-white   d-flex gap-3 py-3" aria-current="true">
-                        <img src="image/product.jpg" alt="" width="40">
-                        <p>Nombre</p>
-                    </a>
+                <div id="" class="list-group mt-2">
+                    <div class="row cursor bg-gradient bg-black p-2 m-2">
+                        <div class="col-4 ">
+                            <img src="image/product.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div>
+                    <div class="row cursor bg-gradient bg-black p-2 m-2">
+                        <div class="col-4 ">
+                            <img src="image/product.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div>
+                    <div class="row cursor bg-gradient bg-black p-2 m-2">
+                        <div class="col-4 ">
+                            <img src="image/product.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div>
+                    <div class="row cursor bg-gradient bg-black p-2 m-2">
+                        <div class="col-4 ">
+                            <img src="image/product.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p>Compro y reparo tv lcd-led para piezas</p>
+                            <p class="text-muted"><span>hace 10 horas</span> / <span>La habana</span> / <span>555</span>
+                                / Daniel</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,83 +273,7 @@
 
 
 
-    <!-- Footer -->
-    <div class=" ">
-        <footer class="py-5">
-            <div class="row m-2">
-                <div class="col-2">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                    </ul>
-                </div>
 
-                <div class="col-2">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-2">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-md-12">
-                    <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of whats new and exciting from us.</p>
-                        <div class="d-flex">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control w-75" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="d-flex row m-2 justify-content-between py-4 my-4 border-top">
-                <div class="col-12 col-md-6">
-                    <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-                    <div class="">
-                        <img src="image/logo1.png"
-                            class="img-responsive bd-placeholder-img bd-placeholder-img-lg img-fluid  " width="277"
-                            height="80" alt="">
-                        <h1>Dust</h1>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#twitter" />
-                                </svg></a></li>
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#instagram" />
-                                </svg></a></li>
-                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                    <use xlink:href="#facebook" />
-                                </svg></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </div>
 
 
     <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1"
@@ -278,7 +320,7 @@
 
     <script src="Utils/petitions.js"></script>
 
-    <script src="index.js"></script> 
+    <!-- <script src="index.js"></script> -->
 </body>
 
 </html>

@@ -1,13 +1,3 @@
-
-const loadAllAnnouncement = async () => {
-    const announcement = await getMyAnnouncement()
-    // const name = document.getElementsByClassName("name");
-    // for (let i = 0; i < name.length; i++) {
-    //     let ele = name[i] 
-    //     ele.innerHTML = announcement.announcement[i].name   
-    // }
-}
-
 const login = document.getElementById("login")
 
 login.addEventListener("submit", async (e) => {
@@ -18,6 +8,7 @@ login.addEventListener("submit", async (e) => {
     }
 
     const token = await loginClient(data)
-    localStorage.setItem("token", token.token)
+    console.log(token.bag)
+    localStorage.setItem("token", token.bag)
     location.href = "/"
 })

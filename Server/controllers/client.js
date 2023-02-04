@@ -12,10 +12,12 @@ const getMyAnnouncement = async (req, res) => {
             }
         })
         res.json({
-            announcement
+            status: "200",
+            bag: announcement
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -32,11 +34,13 @@ const addAnnouncement = async (req, res) => {
         })
         announcement.save()
         res.json({
-            announcement
+            status: "200",
+            bag: announcement
         })
     } catch (error) {
         console.log(error)
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -61,7 +65,8 @@ const editAnnouncement = async (req, res) => {
         })
     } catch (error) {
         console.log(error)
-        res.status(404).json({
+        res.json({
+            status: "404",
             msg: "Error al cargar la base de datos"
         })
     }
@@ -73,10 +78,12 @@ const editAccount = async (req, res) => {
         const client = await Client.findByPk(req.uid)
         await client.update({name: name})
         res.json({
+            status: "200",
             msg: "correct"
         })
     } catch (error) {
-        res.status(404).json({
+        res.json({
+            status: "401",
             msg: "incorrect"
         })
     }
