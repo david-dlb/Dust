@@ -1,0 +1,15 @@
+beta:
+- creacion de clientes
+- manegar clientes, sus estadisticas y permisos
+- gestion de clientes: Creacion de publicacion y manejo de estas, con informacion
+- barra de busqueda funcional
+- Implementacion de categorias en los anuncios
+- Algoritmo para selecionar clientes o publicaciones para mostrar como preferidas
+- implementar paginacion o sea no enviar todas las publicaciones sino segmentarlas
+
+
+alfa - inicio de la fase red social:
+- implementar los usuarios
+- seccion de seguimiento de clientes
+- seccion de anuncios favoritos
+
