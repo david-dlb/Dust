@@ -30,7 +30,39 @@ class Server {
             // const p = new integrants({
             //     name: "Flaqui"
             // })
+            // const p1 = new integrants({
+            //     name: "Dayanys"
+            // })
+            // const p2 = new integrants({
+            //     name: "Beyonce"
+            // })
+            // const p3 = new integrants({
+            //     name: "Barby"
+            // })
+            // const p4 = new integrants({
+            //     name: "Amandita"
+            // })
+            // const p5 = new integrants({
+            //     name: "David"
+            // })
+            // const p6 = new integrants({
+            //     name: "Alfredo"
+            // })
+            // const p7 = new integrants({
+            //     name: "Nelsi"
+            // })
+            // const p8 = new integrants({
+            //     name: "chistofer"
+            // })
             // p.save()
+            // p1.save()
+            // p2.save()
+            // p3.save()
+            // p4.save()
+            // p5.save()
+            // p6.save()
+            // p7.save()
+            // p8.save()
             // console.log(await integrants.findAll())
             // const acc = await Account.findAll()
             // const s = await give.findAll()

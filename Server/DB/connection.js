@@ -1,14 +1,14 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize(
-    'dust',
-    'david',
-    'Lily2@21',
+    'deivistm_dust',
+    'deivistm',
+    'DTM02030362406@',
     {
-        host: 'localhost',
+        host: 'mysql-deivistm.alwaysdata.net',
         dialect: 'mysql'
     }
 );
-if (true) {
+if (false) {
     const sequelize = new Sequelize(
         'dust',
         'david',
