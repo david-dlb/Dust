@@ -94,3 +94,22 @@ const validateClient = async () => {
     })
     return await response.json();
 }
+
+
+
+
+const getGive = async (data) => {
+    const response = await fetch(`/api/rifa`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    return await response.json();
+}
+const getIntegrants = async () => {
+    const response = await fetch(`/api/rifa`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    return await response.json();
+}

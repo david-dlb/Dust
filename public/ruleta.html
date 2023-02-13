@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 , maximum-scale=1.0 , minimum-scale=1.0 , user-scalable=no">
+    <link rel="stylesheet" href="complements/bootstrap/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
+
+
+    <script src="complements/jquery.js"></script>
+    <script src="complements/popper.js"></script>
+    <script src="complements/bootstrap/js/bootstrap.bundle.js"></script>
+
+    <title>Dust</title>
+</head>
+
+<body class="text-white bg-gradient bg-black" id="body">
+
+    <div class="container text-center mt-5">
+        <h1 class="text-danger">Bienvenidos a la rifa de regalos</h1>
+    </div>
+
+    <div class="mt-5">
+        <form id="select" class="d-flex justify-content-center">
+            <div>
+                <label for="">Quien es usted</label>
+                <select name="name" id="name" class="form-select me-2 select">
+                    <option selected>Amandita</option>
+                    <option value="">Flaca</option>
+                    <option value="">Dayanis</option>
+                </select>
+            </div>
+           
+            <button class="btn btn-primary ms-4">Aceptar</button>
+        </form>
+    </div>
+
+    <div id="give" class="mt-5 text-center" style="display: none;">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <p>Felicidates <span id="reg"></span> te ha tocado <span id="take"></span></p>
+            <button type="submit"  class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    </div>
+
+    <script src="Utils/petitions.js"></script>
+
+    <script src="rifa.js"></script>
+</body>
+
+</html>

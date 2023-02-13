@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const { sequelize } = require('../DB/connection')
-const { Account } = require('../DB/account')
+const { integrants } = require('../DB/integrants');
+const { give } = require('../DB/give');
 
 class Server {
     constructor() {
@@ -26,7 +27,15 @@ class Server {
             // })
             // account.save()
 
+            // const p = new integrants({
+            //     name: "Flaqui"
+            // })
+            // p.save()
+            // console.log(await integrants.findAll())
             // const acc = await Account.findAll()
+            // const s = await give.findAll()
+            // await give.drop()
+            // console.log(await integrants.findAll())
         } catch (error) {
             console.log(error)
         }
@@ -43,7 +52,8 @@ class Server {
         this.app.use('/api/client', require('../routes/client')) 
         this.app.use('/api/user', require('../routes/user')) 
         this.app.use('/api/login', require('../routes/login')) 
-        this.app.use('/api/auth', require('../routes/auth'))
+        this.app.use('/api/auth', require('../routes/auth')) 
+        this.app.use('/api/rifa', require('../routes/rifa'))
     }
 
     listen() {
